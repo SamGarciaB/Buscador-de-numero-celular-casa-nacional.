@@ -1,0 +1,21 @@
+# Configuración local y secretos
+/config.php
+.env
+.env.*
+!.env.example
+
+# Bases de datos y volcados locales
+*.sql
+!/demo.sql
+*.sql.gz
+*.dump
+*.sqlite
+*.sqlite3
+*.db
+
+# Logs, respaldos y archivos temporales
+*.log
+*.bak
+*.backup
+*.old
+*.tmp

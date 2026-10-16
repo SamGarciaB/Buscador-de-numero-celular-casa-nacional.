@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Prototipo de consulta de rangos telefónicos con una demo pública de datos ficticios. La versión completa requiere una base de numeración real y actualizada.">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Consulta de numeración — Demo de portafolio</title>
+  <link rel="stylesheet" href="style.css?v=20261012">
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <aside class="demo-notice" aria-label="Aviso de demostración">
+    <p><strong>Prototipo independiente para portafolio.</strong> No es una herramienta del IFT ni está afiliada a ese organismo. Consulta operador y zona de asignación; no identifica al titular. Usa números ficticios.</p>
+  </aside>
+
+  <header class="site-header">
+    <div class="brand">
+      <span class="brand-title">PROTOTIPO DE CONSULTA DE NUMERACIÓN</span>
+      <span class="brand-subtitle">CONSULTA DE RANGOS TELEFÓNICOS</span>
+    </div>
+    <div class="header-meta">
+      <span class="independent">PROTOTIPO INDEPENDIENTE</span>
+      <span class="demo-status"><span class="status-dot" aria-hidden="true"></span> DEMOSTRACIÓN</span>
+      <a class="source-link" href="https://github.com/SamGarciaB/Buscador-de-numero-celular-casa-nacional.">VER CÓDIGO</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="intro" aria-labelledby="page-title">
+      <h1 id="page-title">Consulta la asignación del número</h1>
+      <p>Prueba con un número ficticio de 10 dígitos; no se consulta quién es su titular.</p>
+    </section>
+
+    <section class="search-section" aria-labelledby="search-title">
+      <h2 id="search-title" class="sr-only">Consulta de ejemplo</h2>
+      <label for="number">Número de prueba (10 dígitos)</label>
+      <div class="search-row">
+        <input id="number" type="text" inputmode="numeric" autocomplete="off" maxlength="10" value="0000000000" aria-describedby="input-help">
+        <button id="search" type="button">Consultar <span aria-hidden="true">→</span></button>
+      </div>
+      <p id="input-help" class="help">La consulta muestra operador y zona asignada; no revela quién es el titular.</p>
+      <p id="feedback" class="feedback" role="status" aria-live="polite"></p>
+
+      <article id="result" class="identity-card" aria-live="polite" hidden>
+        <div class="result-heading">
+          <p class="result-label">RESULTADO SIMULADO</p>
+          <span class="result-badge">FICTICIO</span>
+        </div>
+        <div class="result-grid">
+          <div>
+            <p class="field-label">Compañía telefónica</p>
+            <p class="field-value">Operador de demostración</p>
+          </div>
+          <div>
+            <p class="field-label">Localidad / modalidad</p>
+            <p class="field-value">Localidad ficticia · Celular</p>
+          </div>
+          <div>
+            <p class="field-label">Estado</p>
+            <p class="field-value">Estado de ejemplo</p>
+          </div>
+        </div>
+        <div class="result-foot">
+          <p>Fuente: conjunto ficticio. No representa asignaciones reales ni cobertura nacional.</p>
+          <span class="status-dot" aria-hidden="true"></span>
+        </div>
+      </article>
+
+      <p class="sample-note">DEMO FICTICIA · ÚNICO RANGO DISPONIBLE: <code>0000000000–0000000999</code>. No introduzcas teléfonos reales. La búsqueda se procesa en esta página; no se envía ni se guarda.</p>
+    </section>
+
+    <section class="scope" aria-label="Alcance y fuente de datos">
+      <p><strong>La versión completa (PHP + MySQL)</strong> puede consultar una base local construida con registros públicos de asignación de numeración del <a href="https://sns.ift.org.mx/sns-frontend/consulta-numeracion/numeracion-geografica.xhtml" target="_blank" rel="noopener noreferrer">sistema oficial del IFT</a>. Con una fuente real y vigente, puede mostrar el concesionario asignatario, área geográfica o localidad, entidad y modalidad, según los campos disponibles. Para reflejar información actualizada hace falta importar y mantener al día esa base. La asignación de un rango no garantiza quién presta actualmente el servicio a cada línea, por ejemplo, debido a la portabilidad.</p>
+      <p>Esta demo pública no se conecta al IFT ni a una base real: solo muestra el rango y los resultados ficticios de ejemplo.</p>
+    </section>
+  </main>
+
+  <footer>
+    <span>PROTOTIPO INDEPENDIENTE | SIN AFILIACIÓN AL IFT</span>
+    <span>DEMO ESTÁTICA | NO IDENTIFICA TITULARES</span>
+  </footer>
+</body>
+</html>

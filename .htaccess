@@ -1,0 +1,10 @@
+# Evita exponer configuraciones locales, volcados y archivos internos.
+<Files "config.php">
+    Require all denied
+</Files>
+
+<FilesMatch "^\.|\.(sql|log|bak|backup|old|ini)$">
+    Require all denied
+</FilesMatch>
+
+Options -Indexes
